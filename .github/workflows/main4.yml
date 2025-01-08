@@ -1,0 +1,12 @@
+name: 演習4
+# イベントの手動実行
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "10 9,18 * * *"
+jobs:
+  windows-hello:
+    runs-on: windows-latest
+    steps:
+      - name: output
+        run: echo "Hello, GitHub Actions."
