@@ -1,4 +1,4 @@
-name: 演習１
+name: 演習1
 # イベントの手動実行
 on:
   workflow_dispatch:
