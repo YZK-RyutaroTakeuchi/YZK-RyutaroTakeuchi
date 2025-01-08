@@ -1,0 +1,24 @@
+name: 演習2
+# イベントの手動実行
+on:
+  workflow_dispatch:
+
+jobs:
+  windows-hello:
+    runs-on: windows-latest
+    steps:
+      - name: output
+        run: echo "Hello, GitHub Actions."
+  
+  windows-hello2:
+    needs: windows-hello
+    runs-on: windows-latest
+    steps:
+      - name: output
+        run: echo "Hello, GitHub Actions.2"
+
+  windows-hello3:
+    runs-on: windows-latest
+    steps:
+      - name: output
+        run: echo "Hello, GitHub Actions.3"
